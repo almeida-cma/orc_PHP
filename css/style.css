@@ -1,0 +1,123 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h2 span {
+    font-weight: bold;
+    color: #007bff; /* Destaque para o orçamento carregado */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+input, button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+ul {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para a seção "Itens do Orçamento" */
+section:nth-of-type(3) {
+    background-color: #dcdfe2; /* Fundo discreto azul claro */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+section:nth-of-type(3) button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section:nth-of-type(3) button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}

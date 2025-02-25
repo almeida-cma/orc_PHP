@@ -1,0 +1,25 @@
+-- Verifica se o banco de dados gestao_orcamentos já existe, se não, cria
+CREATE DATABASE IF NOT EXISTS gestao_orcamentos;
+
+-- Usa o banco de dados
+USE gestao_orcamentos;
+
+-- Verifica se a tabela orcamentos já existe, se não, cria
+CREATE TABLE IF NOT EXISTS orcamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL
+);
+
+-- Verifica se a tabela itens já existe, se não, cria
+CREATE TABLE IF NOT EXISTS itens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    orcamento_id INT NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    fornecedor VARCHAR(255),
+    foto VARCHAR(255),
+    FOREIGN KEY (orcamento_id) REFERENCES orcamentos(id) ON DELETE CASCADE
+);
+
+-- Mensagem de sucesso
+SELECT 'Banco de dados e tabelas criados/verificados com sucesso!' AS status;
